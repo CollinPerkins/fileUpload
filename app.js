@@ -30,7 +30,7 @@ app.get('/', function(req, res, next) {
 
 var fileSizeObject;
 
-app.post('/', multer().single('upl'), function(req,res){
+app.post('/', multer({ dest: '../uploads/'}).single('upl'), function(req,res){
 	console.log(req.body); //form fields
 
   fileSize = {
